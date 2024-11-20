@@ -1,5 +1,5 @@
 /* Extra Large*/
-@media (min-width: 769px){
+@media (min-width: 900px){
 
     body, html {
         margin: 0;
@@ -15,7 +15,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        background: url('png/yasminFoto.jpg') no-repeat center center;
+        background: url('png/yasminPng.jpg') no-repeat center center;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -31,39 +31,51 @@
 
     .containerBranco {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 40px;
-        background-color: #fff;
+        justify-content: space-between;
+        padding: 80px 120px;
+        background-color: #FFFFFF;
     }
 
-    .containerBranco .texto {
-        flex: 1;
-        padding-right: 40px;
+    .texto {
+        flex: 0.8;
+        padding-right: 80px;
+        max-width: 500px;
     }
 
-    .containerBranco .texto h2 {
+    .texto h2 {
         font-size: 32px;
-        color: #0D1854;
+        color: #0D1128;
+        margin-bottom: 24px;
+        font-weight: bold;
+    }
+
+    .missao-texto {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #4A4A4A;
         margin-bottom: 20px;
     }
 
-    .containerBranco .imagem {
-        flex: 1;
-        text-align: right;
-        margin-right: 45px;
-    }
-
-    .containerBranco .imagem img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        
+    .imagem {
+        flex: 1.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
     }
 
     #pngEco {
         width: 100%;
-        height: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        min-width: 400px;
+    }
+
+    #pngEco:hover {
+        transform: scale(1.02);
     }
 
     .contentBranco h2{
@@ -323,20 +335,19 @@
         margin: 0;
     }
 
-    /* Seção Sobre Nós */
     .sobre-nos {
         display: flex;
         align-items: center;
         background-color: #E8F5E9;
         padding: 20px;
         border-radius: 10px;
-        margin: 20px 0;  /* Adicionei margem para espaçamento */
+        margin: 20px 0;  
     }
 
     .sobre-nos .texto {
         flex: 1;
         color: #2E7D32;
-        font-family: 'Montserrat', sans-serif;  /* Mantendo a fonte padrão do projeto */
+        font-family: 'Montserrat', sans-serif;  
         padding-right: 20px;
     }
 
@@ -359,21 +370,60 @@
         max-width: 90%;
         border-radius: 10px;
     }
-}
 
-@media screen and (max-width: 768px) {
-    .containerBranco {
-        flex-direction: column;
-        padding: 20px;
+    .developers-section {
+        padding: 40px 0;
+        text-align: center;
+        background-color: #0D1128;
     }
 
-    .containerBranco .texto {
-        padding-right: 0;
-        margin-bottom: 20px;
+    .developers-section h3 {
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #FFFFFF;
+    }
+
+    .developers {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .dev-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .containerBranco .imagem {
-        width: 100%;
+    .dev-name {
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+    .dev-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 8px;
+        border: 3px solid #6C30F5;
+    }
+
+    .linkedin-link {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+    }
+
+    .linkedin-link:hover {
+        color: #6C30F5;
+        text-decoration: underline;
+        transform: translateY(-2px);
     }
 }
