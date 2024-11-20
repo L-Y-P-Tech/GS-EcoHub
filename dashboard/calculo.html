@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculo Mensal </title>
+    <title>Calculo Mensal</title>
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="../reset.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -27,7 +27,7 @@
     <div class="containercalculo">
             <div class="box">
                 <strong>Você Possui</strong>
-                <p id="quantidade">0</p>
+                <p id="quantidade">2599</p>
                 <p>Raios</p>
             </div>
 
@@ -40,23 +40,28 @@
             <canvas id="myChart"></canvas>
         </div>
     </div>
-    <div class="containerFinalCalculo"> 
+    <div class="containerFinalCalculo">
         <div class="boxFinal1">
-            <div class="dicas-sustentaveis">
-                <h2>Dicas Sustentáveis</h2>
-                <p id="dica-texto">Desligue os aparelhos da tomada quando não estiver usando.</p>
-                <button onclick="proximaDica()">Próxima Dica</button>
-            </div>
+            <h2>Dicas Sustentáveis</h2>
+            <p id="dica-texto">Desligue os aparelhos da tomada quando não estiver usando.</p>
+            <button onclick="proximaDica()">Próxima Dica</button>
         </div>
         <div class="boxFinal2">
-            <div class="desafios-gamificacao">
-                <h2>Desafios Sustentáveis</h2>
-                <p id="desafio-texto">Use 10% a menos de energia hoje e ganhe 5 raios!</p>
-                <p id="recompensa-texto">Recompensa: +5 Raios ⚡</p>
-                <button onclick="aceitarDesafio()">Aceitar Desafio</button>
-                <button onclick="completarDesafio()">Concluir Desafio</button>
+            <h2>Desafios</h2>
+            <p id="desafio-texto"></p>
+            <p id="recompensa-texto"></p>
+            <p id="status-texto"></p>
+            <div class="botoes-desafio">
+                <button onclick="aceitarDesafio()">Aceitar</button>
+                <button onclick="completarDesafio()">Completar</button>
+                <button onclick="adicionarRaiosGanhos()" class="btn-adicionar">Adicionar ao Total</button>
             </div>
         </div>
     </div>
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 EcoHub. Todos os direitos reservados. Desenvolvido com 💚 para um futuro mais sustentável</p>
+        </div>
+    </footer>
 </body>
 </html>

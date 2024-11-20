@@ -30,13 +30,40 @@
     }
 
     .containerBranco {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        background-color: #fff;
+    }
+
+    .containerBranco .texto {
+        flex: 1;
+        padding-right: 40px;
+    }
+
+    .containerBranco .texto h2 {
+        font-size: 32px;
+        color: #0D1854;
+        margin-bottom: 20px;
+    }
+
+    .containerBranco .imagem {
+        flex: 1;
+        text-align: right;
+        margin-right: 45px;
+    }
+
+    .containerBranco .imagem img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        
+    }
+
+    #pngEco {
         width: 100%;
         height: 100%;
-        background-color: #FFFFFF;
-        padding: 20px;
-        background-image: url('../Ecohub/png/52913.jpg');
-        
     }
 
     .contentBranco h2{
@@ -278,5 +305,75 @@
         width: 100%;
         border-radius: 10px;
         object-fit: cover;
+    }
+
+    .footer {
+        background-color: #0D1854;
+        padding: 20px 0;
+        margin-top: 30px;
+        color: white;
+        font-size: 14px;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-content p {
+        margin: 0;
+    }
+
+    /* Seção Sobre Nós */
+    .sobre-nos {
+        display: flex;
+        align-items: center;
+        background-color: #E8F5E9;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;  /* Adicionei margem para espaçamento */
+    }
+
+    .sobre-nos .texto {
+        flex: 1;
+        color: #2E7D32;
+        font-family: 'Montserrat', sans-serif;  /* Mantendo a fonte padrão do projeto */
+        padding-right: 20px;
+    }
+
+    .sobre-nos h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .sobre-nos p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .sobre-nos .imagem {
+        flex: 1;
+        text-align: right;
+    }
+
+    .sobre-nos img {
+        max-width: 90%;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containerBranco {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .containerBranco .texto {
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .containerBranco .imagem {
+        width: 100%;
     }
 }

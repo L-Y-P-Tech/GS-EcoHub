@@ -12,6 +12,51 @@ const dicas = [
             dicaAtual = (dicaAtual + 1) % dicas.length;  // Volta ao início quando chegar ao fim
             document.getElementById('dica-texto').textContent = dicas[dicaAtual];
         }
+
+        const desafios = [
+            { texto: "Use 10% menos energia hoje e ganhe 5 raios!", recompensa: 5 },
+            { texto: "Reduza o tempo no chuveiro pra economizar água.", recompensa: 3 },
+            { texto: "Desligue as luzes de cômodos vazios.", recompensa: 2 },
+            { texto: "Reutilize a água da chuva para regar plantas.", recompensa: 4 },
+        ];
+
+        let indiceDesafio = 0;
+        let raios = 0;
+        let raiosGanhos = 0;
+        let desafioAceito = false;
+
+        function aceitarDesafio() {
+            document.getElementById("status-texto").textContent = "Desafio aceito! Complete-o para ganhar sua recompensa.";
+            desafioAceito = true;
+        }
+
+        function completarDesafio() {
+            if (!desafioAceito) {
+                document.getElementById("status-texto").textContent = "Aceite o desafio primeiro!";
+                return;
+            }
+
+            const recompensa = desafios[indiceDesafio].recompensa;
+            raiosGanhos += recompensa;
+            
+            document.getElementById("status-texto").textContent = `Parabéns! Você ganhou ${recompensa} raios! Total ganho: ${raiosGanhos} raios ⚡`;
+            
+            desafioAceito = false;
+            indiceDesafio = (indiceDesafio + 1) % desafios.length;
+            document.getElementById("desafio-texto").textContent = desafios[indiceDesafio].texto;
+            document.getElementById("recompensa-texto").textContent = `Recompensa: +${desafios[indiceDesafio].recompensa} Raios ⚡`;
+        }
+
+        function adicionarRaiosGanhos() {
+            if (raiosGanhos > 0) {
+                let quantidadeAtual = parseInt(document.getElementById("quantidade").textContent);
+                quantidadeAtual += raiosGanhos;
+                document.getElementById("quantidade").textContent = quantidadeAtual;
+                raiosGanhos = 0; // Zera os raios ganhos após adicionar ao total
+                document.getElementById("status-texto").textContent = "Raios adicionados ao seu total!";
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const ctx = document.getElementById('myChart').getContext('2d');
             const myChart = new Chart(ctx, {
@@ -44,4 +89,10 @@ const dicas = [
                     }
                 }
             });
+
+            // Inicializar o primeiro desafio
+            document.getElementById("desafio-texto").textContent = desafios[indiceDesafio].texto;
+            document.getElementById("recompensa-texto").textContent = `Recompensa: +${desafios[indiceDesafio].recompensa} Raios ⚡`;
         });
+
+        

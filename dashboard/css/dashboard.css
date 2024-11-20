@@ -9,7 +9,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-
 }
 
 .navbar .logo {
@@ -25,7 +24,6 @@ body {
     margin-left: 10px;
     padding: 10px 20px;
     border-radius: 8px;
-    /*background-color: #0d1854;*/
     color: #0d1854;
     font-weight: bold;
     text-align: center;
@@ -85,24 +83,6 @@ header {
     font-weight: bold;
 }
 
-.chart-container {
-    margin-top: 20px;
-}
-
-.chart-container h2{
-    margin-bottom: 10px;
-}
-
-.chart {
-    background: #e9ecef;
-    border: 1px solid #ccc;
-    height: 300px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .navbar .link-menu {
     margin: 0 15px;
     text-decoration: none;
@@ -122,7 +102,6 @@ header {
     padding: 20px;
     padding-bottom: 0;
     display: flex;
-    
 }
 
 .box{
@@ -139,7 +118,6 @@ header {
     font-size: 18px; 
     font-weight: bold;
 }
-
 
 #quantidade {
     font-size: 48px; 
@@ -168,15 +146,15 @@ header {
     padding: 20px;
     display: flex;
     padding-bottom: 0;
-    
 }
 
 .boxMeio{
     background-color: #0D1854;
-    height: 220px;
-    width: 100%;
+    width: calc(100% - 20px);
+    height: 180px;
     border-radius: 20px;
-    text-align: center;
+    margin: 0 10px;
+    padding: 15px;
 }
 
 .containerFinalCalculo{
@@ -185,43 +163,28 @@ header {
     height: 220px;
     padding: 20px;
     display: flex;
-    
 }
 
-.boxFinal1{
+.boxFinal1, .boxFinal2 {
     background-color: #0D1854;
+    height: 220px;
+    width: 50%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.boxFinal1 {
     margin-right: 20px;
-    height: 220px;
-    width: 50%;
-    border-radius: 20px;
-    text-align: center;
 }
 
-.boxFinal2{
-    background-color: #0D1854;
-    height: 220px;
-    width: 50%;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.dicas-sustentaveis {
-    background-color: #112244; 
-    color: #fff; 
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    height: 180px;
-    border-radius: 20px;
-}
-
-.dicas-sustentaveis h2 {
+.boxFinal1 h2 {
+    margin-top: 20px;
     margin-bottom: 45px;
     font-size: 24px;
     color: #00ff7f;
 }
 
-.dicas-sustentaveis button {
+.boxFinal1 button {
     margin-top: 52px;
     padding: 10px 15px;
     border: none;
@@ -232,43 +195,102 @@ header {
     cursor: pointer;
 }
 
-.dicas-sustentaveis button:hover {
+.boxFinal1 button:hover {
     background-color: #00cc66;
 }
 
-.desafios-gamificacao {
-    background-color: #223355; 
-    color: #fff; 
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    height: 180px;
-
-}
-
-.desafios-gamificacao h2 {
-    margin-bottom: 40px;
+.boxFinal2 h2 {
+    margin-top: 20px;
+    margin-bottom: 45px;
     font-size: 24px;
-    color: #FFD700; 
+    color: #FFD700;
 }
 
-.desafios-gamificacao p {
-    margin: 14px 0;
-    font-size: 18px;
-}
-
-.desafios-gamificacao button {
-    margin: 5px;
-    padding: 10px 15px;
+.boxFinal2 button {
+    padding: 8px 15px;
     border: none;
-    background-color: #FFD700; 
+    background-color: #FFD700;
     color: #000;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.desafios-gamificacao button:hover {
-    background-color: #FFC107; 
+.boxFinal2 button:hover {
+    background-color: #FFC107;
+}
+
+.boxFinal2 #status-texto {
+    color: #00ff7f;
+    margin-top: 10px;   
+    font-size: 14px;
+}
+
+.boxFinal2 #recompensa-texto {
+    color: #FFD700;
+    margin-top: 5px;
+}
+
+#myChart {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 150px !important;
+}
+
+@media screen and (max-width: 515px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        margin-right: 5px;
+    }
+
+    .navbar .link-menu {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+
+    .containercalculo {
+        height: auto;
+    }
+
+    .containerMeiocalculo {
+        height: auto;
+    }
+
+    .containerFinalCalculo {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .boxFinal1,
+    .boxFinal2 {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #quantidade {
+        font-size: 32px;
+    }
+
+    .boxMeio h2 {
+        margin-top: 10px;
+    }
+}
+
+.dashboard-footer {
+    background-color: #0D1854;
+    padding: 20px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0;
 }
 
