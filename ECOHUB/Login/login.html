@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <button class="close-btn" onclick="voltar()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <div>
+            <img src="png/sem_circulo.png" id="imagem" >
+        </div>
+        <form action="../dashboard/index.html" method="get">
+            <input type="email" placeholder="Email" value="EcoHub@gmail.com" required>
+            <input type="password" placeholder="Senha" value="12345" required>
+            <button type="submit" class="botaoLogin">LOGIN</button>
+        </form>
+            <p>Não está cadastrado? <a href="../Cadastro/cadastro.html">Cadastre-se</a></p>
+    </div>
+
+
+    <script>
+        function voltar() {
+            window.history.back(); // Volta para a página anterior
+        }
+    </script>
+</body>
+</html>
