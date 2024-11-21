@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const ctx = document.getElementById('myChart').getContext('2d');
+    const ctx = document.getElementById('myChart1').getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -29,5 +29,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-    })
-})
+    });
+});
