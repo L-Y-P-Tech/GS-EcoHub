@@ -18,7 +18,6 @@ body {
     width: 300px;
 }
 
-
 .cadastro-container img {
     width: 50px;
     height: 50px;
@@ -53,8 +52,7 @@ body {
     margin: 20px 0;
     border: none;
     border-radius: 25px;
-    background: linear-gradient(to right, #0c7179
-    , #0d1854);
+    background: linear-gradient(to right, #0c7179, #0d1854);
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -73,27 +71,43 @@ body {
     text-decoration: underline;
 }
 
-#imagem{
+#imagem {
     width: 100%;
     height: auto;
 }
 
-label{
+label {
     float: left;
 }
-
 
 .close-btn {
     position: absolute;
     top: 10px;
-    left: 10px; /* A seta normalmente fica à esquerda */
+    left: 10px;
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #000000;
+    color: #000;
 }
 
 .close-btn:hover {
-    color: #ff11009c; /* Cor azul ao passar o mouse */
+    color: #ff11009c;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+}
+
+#cadastroForm input {
+    margin-bottom: 25px;
 }

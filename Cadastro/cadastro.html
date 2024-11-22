@@ -10,29 +10,21 @@
 </head>
 <body>
     <div class="cadastro-container">
-        <button class="close-btn" onclick="voltar()">
+        <button class="close-btn" onclick="window.history.back()">
             <i class="fas fa-arrow-left"></i>
         </button>
         <div>
             <img src="../png/sem_circulo.png" id="imagem" >
         </div>
-        <form action="../Login/login.html">
-            <input type="text" placeholder="Nome">
-
-            <input type="email" placeholder="Email" required>
-
-            <input type="text"placeholder="CPF" required>
-
-            <input type="password" placeholder="Senha" required>
-
+        <form id="cadastroForm" action="../Login/login.html">
+            <input type="text" id="nome" placeholder="Nome" >
+            <input type="email" id="email" placeholder="Email" >
+            <input type="text" id="cpf" placeholder="CPF" >
+            <input type="password" id="senha" placeholder="Senha" >
             <button type="submit" class="botaoCadastro">Cadastre-se</button>
         </form>
     </div>
 
-    <script>
-        function voltar() {
-            window.history.back(); // Volta para a página anterior
-        }
-    </script>
+    <script src="js/cadastro.js"></script>
 </body>
 </html>
