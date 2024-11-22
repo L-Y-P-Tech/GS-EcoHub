@@ -438,4 +438,9 @@
         bottom: 0;
         width: 100%;
     }
+
+    .dashboard-button {
+        /* Use o mesmo estilo do seu botão de login */
+        display: none; /* Inicialmente oculto */
+    }
 }

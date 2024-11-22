@@ -428,4 +428,9 @@
         text-decoration: underline;
         transform: translateY(-2px);
     }
+
+    .dashboard-button {
+        /* Use o mesmo estilo do seu botão de login */
+        display: none; /* Inicialmente oculto */
+    }
 }
