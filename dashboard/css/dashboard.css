@@ -11,6 +11,10 @@ body {
     padding: 10px;
 }
 
+.economia-container h2, .gasto-container h2{
+    color: white;
+}
+
 .navbar .logo {
     display: flex;
     align-items: center;
@@ -76,6 +80,7 @@ header {
 
 .card h2 {
     margin: 0 0 10px;
+    color: white;
 }
 
 .value {
@@ -285,7 +290,51 @@ h2 {
     color: white;
 }
 
-@media screen and (max-width: 515px) {
+.dashboard-footer {
+    background-color: #0D1854;
+    padding: 20px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.dashboard-footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 20px 0;
+    bottom: 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.seta-up {
+    color: #2ecc71;  /* verde */
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+.seta-down {
+    color: #e74c3c;  /* vermelho */
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+
+@media (min-width: 393px) and (max-width: 515px) {
+
+    .valor-destaque {
+        font-size: 25px;
+    }
+
+    .economia-container, .gasto-container {
+        padding: 5px;
+    }
+    
     .navbar {
         padding: 10px;
     }
@@ -327,37 +376,42 @@ h2 {
     }
 }
 
-.dashboard-footer {
-    background-color: #0D1854;
-    padding: 20px 0;
-    color: white;
-    font-size: 14px;
+@media screen and (min-width: 515px) and (max-width: 730px) {
+    
+    .box{
+        background-color: #0D1854;
+        color: white;
+        height: 103px;
+        width: 132px;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: 20px;
+        margin-right: 10px;
+        }
+
+    .box2 {
+        margin-left: 0;
+        width: 70%;
+        flex-direction: row;
+        gap: 1rem;
+        height: auto;
+        padding: 15px;
+    }
+
+    .economia-container, .gasto-container {
+        flex: 1;
+        padding: 10px;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .valor-destaque {
+        font-size: 1.3rem;
+    }
+
+    .subtexto {
+        font-size: 0.8rem;
+    }
 }
 
-.dashboard-footer {
-    margin-top: auto;
-    width: 100%;
-    padding: 20px 0;
-    bottom: 0;
-}
-
-.footer-content {
-    text-align: center;
-}
-
-.footer-content p {
-    margin: 0;
-}
-
-.seta-up {
-    color: #2ecc71;  /* verde */
-    font-size: 0.8em;
-    margin-right: 5px;
-}
-
-.seta-down {
-    color: #e74c3c;  /* vermelho */
-    font-size: 0.8em;
-    margin-right: 5px;
-}
 
